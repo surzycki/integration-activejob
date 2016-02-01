@@ -1,8 +1,6 @@
-# Integration::Activejob
+# Tugboat
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/integration/activejob`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+*Making integration testing headaches with activejob passé*
 
 ## Installation
 
@@ -22,7 +20,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+expect(JobType).to be_enqueued
+expect(JobType).to be_enqueued.with(*args)
+expect(JobType).to be_enqueued.to_run_at(time)
+
+expect(JobType).to be_executed
+expect(JobType).to be_executed.with(*args)
+expect(JobType).to be_executed.to_run_at(time)
+```
+
+### Configure
+
 
 ## Development
 
